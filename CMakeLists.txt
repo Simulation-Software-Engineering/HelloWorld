@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION "3.12")
 
-project("HelloWorld" VERSION 0.1.0)
+project("HelloWorld" VERSION 0.2.0)
 
 add_library(sse sse/sse.cpp)
 set_target_properties(sse PROPERTIES PUBLIC_HEADER sse/sse.hpp)
@@ -25,3 +25,9 @@ install(TARGETS helloworld sse
   PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/helloworld
   INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/helloworld
   )
+
+# Packaging section
+# Adding other cmake modules
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+# Include our packaging module
+include(Packaging)
