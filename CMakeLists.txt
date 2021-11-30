@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION "3.12")
 
-project("HelloWorld" VERSION 0.2.0)
+project("HelloWorld" VERSION 0.3.0)
 
 add_library(sse sse/sse.cpp)
 set_target_properties(sse PROPERTIES PUBLIC_HEADER sse/sse.hpp)
